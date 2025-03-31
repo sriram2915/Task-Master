@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: 249 250 251;
+    --text-primary: 17 24 39;
+    --card-bg: 255 255 255;
+    --card-border: 229 231 235;
+    --hover-bg: 243 244 246;
+  }
+
+  [data-theme='dark'] {
+    --bg-primary: 17 24 39;
+    --text-primary: 249 250 251;
+    --card-bg: 31 41 55;
+    --card-border: 55 65 81;
+    --hover-bg: 55 65 81;
+  }
+
+  body {
+    @apply bg-[rgb(var(--bg-primary))] text-[rgb(var(--text-primary))];
+  }
+}
+
+.bg-white {
+  @apply bg-[rgb(var(--card-bg))];
+}
+
+.bg-gray-50 {
+  @apply bg-[rgb(var(--bg-primary))];
+}
+
+.bg-gray-100 {
+  @apply bg-[rgb(var(--hover-bg))];
+}
+
+.text-gray-700 {
+  @apply text-[rgb(var(--text-primary))];
+}
+
+.text-gray-500 {
+  @apply text-[rgb(var(--text-primary))] opacity-60;
+}
+
+.text-gray-600 {
+  @apply text-[rgb(var(--text-primary))] opacity-75;
+}
+
+.border-gray-200 {
+  @apply border-[rgb(var(--card-border))];
+}
+
+.hover\:bg-gray-100:hover {
+  @apply hover:bg-[rgb(var(--hover-bg))];
+}
+
+.hover\:bg-gray-200:hover {
+  @apply hover:bg-[rgb(var(--hover-bg))];
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(5px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 4s ease-in-out infinite;
+}
