@@ -1,4 +1,4 @@
-# ✅ Task Management App
+# ✅ Task Master
 
 ## 🚀 Overview
 The **Task Management App** helps users efficiently manage daily tasks with features like task creation, editing, completion tracking, filtering, sorting, drag-and-drop reordering, dark mode, and local storage persistence.
